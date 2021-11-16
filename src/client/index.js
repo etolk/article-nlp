@@ -3,4 +3,4 @@ import { formSubmitValidator } from "./js/formValidator";
 
 import "./styles/main.scss";
 
-export { handleSubmit, formSubmitValidator};
+export { handleSubmit, formSubmitValidator };

@@ -1,29 +1,28 @@
-const path = require('path')
-const webpack = require('webpack')
-const HtmlWebPackPlugin = require("html-webpack-plugin")
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const webpack = require("webpack");
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-    entry: './src/client/index.js',
-    mode: 'development',
-    devtool: 'source-map',
+    entry: "./src/client/index.js",
+    mode: "development",
+    devtool: "source-map",
     output: {
-        libraryTarget: 'var',
-        library: 'Client'
+        libraryTarget: "var",
+        library: "Client",
     },
-    stats: 'verbose',
+    stats: "verbose",
     module: {
         rules: [
             {
-                test: '/\.js$/',
+                test: "/.js$/",
                 exclude: /node_modules/,
-                loader: "babel-loader"
+                loader: "babel-loader",
             },
             {
                 test: /\.scss$/,
-                use: [ 'style-loader', 'css-loader', 'sass-loader' ]
-            }
-        ]
+                use: ["style-loader", "css-loader", "sass-loader"],
+            },
+        ],
     },
     plugins: [
         new HtmlWebPackPlugin({
@@ -37,7 +36,7 @@ module.exports = {
             verbose: true,
             // Automatically remove all unused webpack assets on rebuild
             cleanStaleWebpackAssets: true,
-            protectWebpackAssets: false
-        })
-    ]
-}
+            protectWebpackAssets: false,
+        }),
+    ],
+};

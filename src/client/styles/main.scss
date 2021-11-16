@@ -1,23 +1,22 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito");
+$font-stack: "Nunito", sans-serif;
 
-:root {
-    --start-color: #0575e6;
-    --end-color: #021b79;
-    --p-color: #929da6;
-    --button-background: #0575e6;
-    --input-background: #e4eff8;
-    --error-color: #e10909;
-    --radius-50: 50px;
-    --padding-15: 15px;
-}
+$start-color: #0575e6;
+$end-color: #021b79;
+$p-color: #929da6;
+$button-background: #0575e6;
+$input-background: #e4eff8;
+$error-color: #e10909;
+$radius-50: 50px;
+$padding-15: 15px;
 
 body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background: var(--start-color);
-    background: linear-gradient(to right, var(--start-color), var(--end-color)) no-repeat;
-    font-family: "Nunito", sans-serif;
+    background: $start-color;
+    background: linear-gradient(to right, $start-color, $end-color) no-repeat;
+    font-family: $font-stack;
 }
 
 .wrapper {
@@ -26,74 +25,78 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-.wrapper .contact-us {
-    background: #fff;
-    padding: 80px;
-    max-width: 500px;
-    min-width: 200px;
-    border-radius: 10px;
-    text-align: center;
-}
+    .contact-us {
+        background: #fff;
+        padding: 80px;
+        max-width: 500px;
+        min-width: 200px;
+        border-radius: 10px;
+        text-align: center;
 
-// .wrapper .content header h1 {
-//     font-size: 230%;
-//     margin-top: 0;
-// }
-.wrapper .contact-us .description {
-    color: var(--p-color);
-    font-size: 20px;
-}
-.wrapper .contact-us .form {
-    padding: var(--padding-15);
-}
-.wrapper .contact-us input {
-    border: unset;
-    background-color: var(--input-background);
-    padding: var(--padding-15);
-    font-size: 16px;
-    border-radius: var(--radius-50);
-    width: 250px;
-}
-.wrapper .contact-us button {
-    background-color: var(--button-background);
-    color: #fff;
-    border: unset;
-    width: 125px;
-    border-radius: var(--radius-50);
-    padding: var(--padding-15);
-    margin-left: 10px;
-    cursor: pointer;
-    font-size: 16px;
-}
+        .description {
+            color: $p-color;
+            font-size: 20px;
+        }
 
-.wrapper .contact-us input:focus,
-.wrapper .contact-us button:focus {
-    outline: none;
-}
+        .form {
+            padding: $padding-15;
+        }
 
-.wrapper .contact-us button:hover {
-    background-color: #021c7a;
-}
+        input {
+            border: unset;
+            background-color: $input-background;
+            padding: $padding-15;
+            font-size: 16px;
+            border-radius: $radius-50;
+            width: 250px;
 
-.wrapper .contact-us .results {
-    font-size: 20px;
-    color: var(--p-color);
-}
+            &:focus {
+                outline: none;
+            }
+        }
 
-.wrapper .contact-us #error {
-    color: var(--error-color);
-    font-size: 16px;
+        button {
+            background-color: $button-background;
+            color: #fff;
+            border: unset;
+            width: 125px;
+            border-radius: $radius-50;
+            padding: $padding-15;
+            margin-left: 10px;
+            cursor: pointer;
+            font-size: 16px;
+
+            &:focus {
+                outline: none;
+            }
+
+            &:hover {
+                background-color: #021c7a;
+            }
+        }
+
+        .results {
+            font-size: 20px;
+            color: $p-color;
+        }
+
+        #error {
+            color: $error-color;
+            font-size: 16px;
+        }
+    }
 }
 
 @media screen and (max-width: 720px) {
-    .wrapper .contact-us {
-        margin-right: 20px;
-        margin-left: 20px;
-        // padding: var(--padding-15);
-    }
-    .wrapper .contact-us input {
-        margin-bottom: 12px;
+    .wrapper {
+        .contact-us {
+            margin-right: 20px;
+            margin-left: 20px;
+
+            input {
+                margin-bottom: 12px;
+            }
+        }
     }
 }

@@ -13,17 +13,15 @@ app.get("/", function (req, res) {
 });
 
 // designates what port the app will listen to for incoming requests
-const port = process.env.PORT || 8081
+const port = process.env.PORT || 8081;
 app.listen(port, function () {
-    console.log(`Example app listening on port ${port}!`);
+    console.log(`The App listening on port ${port}!`);
 });
 
 app.get("/getData/:url", async (req, res) => {
-    console.log(req.params);
     const url = `&url=${req.params.url}`;
     const baseURL = "https://api.meaningcloud.com/sentiment-2.1?lang=auto";
     const key = `&key=${process.env.API_KEY}`;
-    console.log(baseURL + key + url);
     const fetch_response = await fetch(baseURL + key + url);
     const json = await fetch_response.json();
     res.json(json);
