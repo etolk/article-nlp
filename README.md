@@ -22,9 +22,9 @@ Sentiment Analysis performed by [MeaningCloud.com](https://www.meaningcloud.com/
 Insert the API key inside the `.env_smaple` file and rename it to `.env`
 
 ## Getting Started
-- npm install
-- npm run build-prod
-- npm start
+- `npm install`
+- `npm run build-prod`
+- `npm start`
 
 There is also a development mode available including the webpack-dev-server. To start the dev mode:
-- npm run build-dev
+- `npm run build-dev`
