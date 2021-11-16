@@ -11,6 +11,7 @@ async function handleSubmit(event) {
     const response = await fetch(`/getData/${encodeUrl}`);
     const json = await response.json();
     let msg = json.status.msg;
+    console.log(json);
     Client.formSubmitValidator(msg, json);
 }
 
