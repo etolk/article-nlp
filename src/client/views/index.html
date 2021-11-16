@@ -1,46 +1,50 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" />
         <title>Test</title>
     </head>
 
     <body>
+        <section class="wrapper">
+            <header></header>
 
-        <header>
-            <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
-            </div>
-        </header>
+            <main>
+                <section class="contact-us">
+                    <div class="description">
+                        <p>
+                            This app determines if provided URL text expresses a
+                            positive/negative/neutral sentiment using the NLP (natural language
+                            processing) technique
+                        </p>
+                    </div>
+                    <form class="form" onsubmit="return Client.handleSubmit(event)">
+                        <input
+                            id="url"
+                            type="text"
+                            name="input"
+                            value=""
+                            placeholder="Please enter the url"
+                        />
+                        <button
+                            type="button"
+                            name=""
+                            onclick="return Client.handleSubmit(event)"
+                            onsubmit="return Client.handleSubmit(event)"
+                        >
+                            Submit
+                        </button>
+                    </form>
+                    <div class="results">
+                        <div id="score_tag"></div>
+                        <div id="confidence"></div>
+                        <div id="irony"></div>
+                        <div id="error"></div>
+                    </div>
+                </section>
+            </main>
 
-        <main>
-            <section>
-                <form class="" onsubmit="return handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
-                </form>
-            </section>
-
-            <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
-            </section>
-        </main>
-
-        <footer>
-            <p>This is a footer</p>
-        </footer>
-        <script>
-            // Check that service workers are supported
-            if ('serviceWorker' in navigator) {
-                // Use the window load event to keep the page load performant
-                window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('/service-worker.js');
-                });
-            }
-           </script>
+            <footer></footer>
+        </section>
     </body>
 </html>

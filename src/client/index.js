@@ -1,11 +1,6 @@
-import { checkForName } from "./js/nameChecker";
 import { handleSubmit } from "./js/formHandler";
-import "./styles/resets.scss";
-import "./styles/base.scss";
-import "./styles/footer.scss";
-import "./styles/form.scss";
-import "./styles/header.scss";
+import { formSubmitValidator } from "./js/formValidator";
 
-console.log("TEST");
+import "./styles/main.scss";
 
-export { checkForName, handleSubmit };
+export { handleSubmit, formSubmitValidator};

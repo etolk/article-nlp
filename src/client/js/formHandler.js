@@ -1,16 +1,24 @@
-function handleSubmit(event) {
-    event.preventDefault()
+async function handleSubmit(event) {
+    event.preventDefault();
 
-    // check what text was put into the form field
-    let formText = document.getElementById('name').value
-    Client.checkForName(formText)
+    let url = document.getElementById("url").value;
+    let encodeUrl = encodeURIComponent(url);
 
-    console.log("::: Form Submitted :::")
-    fetch('http://localhost:8081/test')
-    .then(res => res.json())
-    .then(function(res) {
-        document.getElementById('results').innerHTML = res.message
-    })
+    console.log("::: Form Submitted :::");
+
+    document.getElementById("error").innerHTML = "";
+
+    if (encodeUrl) {
+        const response = await fetch(`/getData/${encodeUrl}`);
+        const json = await response.json();
+        let msg = json.status.msg;
+        Client.formSubmitValidator(msg, json);
+    } else {
+        document.getElementById("error").innerHTML = "Please enter the valid URL";
+        document.getElementById("score_tag").innerHTML = "";
+        document.getElementById("confidence").innerHTML = "";
+        document.getElementById("irony").innerHTML = "";
+    }
 }
 
-export { handleSubmit }
+export { handleSubmit };
