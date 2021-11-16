@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=0.8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.8" />
         <title>NLP App</title>
     </head>
 
@@ -15,8 +15,8 @@
                     <div class="description">
                         <p>
                             This app determines if provided URL text expresses a
-                            positive/negative/neutral sentiment using the Nnatural Language
-                            Processing(NLP) technique
+                            positive/negative/neutral sentiment using the Natural Language
+                            Processing (NLP) technique
                         </p>
                     </div>
                     <form class="form" onsubmit="return Client.handleSubmit(event)">
@@ -45,9 +45,15 @@
                 </section>
             </main>
 
-            <footer></footer>
+            <footer>
+                <div class="page-footer">
+                    <small
+                        >Made with <span>❤</span> by Evgeny Tolkachev</a>
+                    </small>
+                </div>
+            </footer>
         </section>
-        <!-- <script>
+        <script>
             // Check that service workers are supported
             if ("serviceWorker" in navigator) {
                 // Use the window load event to keep the page load performant
@@ -55,6 +61,6 @@
                     navigator.serviceWorker.register("/service-worker.js");
                 });
             }
-        </script> -->
+        </script>
     </body>
 </html>

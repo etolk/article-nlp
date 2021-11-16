@@ -1,5 +1,7 @@
+// for cerating enviroment variables
 const dotenv = require("dotenv").config();
 
+// for using the fetch requests from the server
 const fetch = (...args) => import("node-fetch").then(({ default: fetch }) => fetch(...args));
 
 const express = require("express");
@@ -18,6 +20,7 @@ app.listen(port, function () {
     console.log(`The App listening on port ${port}!`);
 });
 
+// get data from client, make an API call and return the data to client
 app.get("/getData/:url", async (req, res) => {
     const url = `&url=${req.params.url}`;
     const baseURL = "https://api.meaningcloud.com/sentiment-2.1?lang=auto";
