@@ -1,6 +1,6 @@
 # Udacity Evaluate News Article project
 
-## [Demo](https://article-nlp-odqu8.ondigitalocean.app/)
+## [Demo](https://udacity-nlp-app.herokuapp.com/)
 ## Overview
 This project is a part of the [Front End Web Developer](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011) nanodegree program.
 The app allows users to run Sentiment Analysis (also known as opinion mining or emotion AI) on articles or blogs found on other websites. Sentiment Analysis is a sub-field of Natural Language Processing (NLP) that tries to identify and extract opinions within a given text across blogs, reviews, social media, forums, news etc.
